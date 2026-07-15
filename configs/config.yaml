@@ -1,0 +1,60 @@
+# ==========================================
+# Project Configuration
+# ==========================================
+
+project:
+  name: ETL Project
+  version: 0.0.1
+  environment: dev
+
+# ==========================================
+# Input Data
+# ==========================================
+
+input:
+  customer_file:
+    path: data/customers.xlsx
+    sheet_name: Customers
+
+  orders_file:
+    path: data/orders.xlsx
+    sheet_name: Orders
+
+  products_file:
+    path: data/product.xlsx
+    sheet_name: Products
+  inventory_file:
+    path: data/inventory.xlsx
+  employees_file:
+    path: data/employee.xlsx
+
+# ==========================================
+# Output
+# ==========================================
+
+output:
+  folder: output/
+  format: csv
+
+# ==========================================
+# Logging
+# ==========================================
+
+logging:
+  level: INFO
+  log_file: logs/etl.log
+
+# ==========================================
+# Data Quality
+# ==========================================
+
+data_quality:
+  drop_duplicates: true
+  remove_null_rows: false
+
+# ==========================================
+# Date Format
+# ==========================================
+
+date:
+  format: "%Y-%m-%d"
